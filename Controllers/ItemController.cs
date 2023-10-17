@@ -1,10 +1,12 @@
 using BurgerPlace2.Models;
 using BurgerPlace2.Repositories.Interfaces;
 using BurgerPlace2.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerPlace2.Controllers
 {
+    [Authorize]
     public class ItemController : Controller
     {
         private readonly IItemRepository _itemRespository;

@@ -3,9 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using BurgerPlace2.Models;
 using BurgerPlace2.Repositories.Interfaces;
 using BurgerPlace2.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BurgerPlace2.Controllers;
-
+[Authorize]
 public class HomeController : Controller
 {
     private readonly IItemRepository _itemRepository;

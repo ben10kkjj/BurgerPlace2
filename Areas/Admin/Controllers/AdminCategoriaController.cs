@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BurgerPlace2.Context;
 using BurgerPlace2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BurgerPlace2.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class AdminCategoriaController : Controller
     {
