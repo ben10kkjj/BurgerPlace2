@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-danger">Item</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-danger" asp-action="Create">Criar novo</a>
 </p>
-<table class="table">
+<table class="table text-danger"  style="min-height: 70vh;">
     <thead>
         <tr>
             <th>
@@ -39,43 +39,42 @@
             <th>
                 @Html.DisplayNameFor(model => model.Categoria)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+          <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
-            <td>
+            <td >
                 @Html.DisplayFor(modelItem => item.DescricaoCurta)
             </td>
-            <td>
+            <td >
                 @Html.DisplayFor(modelItem => item.DescricaoDetalhada)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Preco)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagemPequenaUrl)
+                <img src="@Html.DisplayFor(modelItem => item.ImagemPequenaUrl)" width="100px">
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagemUrl)
+                 <img src=" @Html.DisplayFor(modelItem => item.ImagemUrl)" width="100px">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ativo)
             </td>
-            <td>
+           <td>
                 @Html.DisplayFor(modelItem => item.Destaque)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Categoria.CategoriaId)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ItemId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ItemId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+                <a class="btn btn-danger text-white" asp-action="Edit" asp-route-id="@item.ItemId">Editar</a> |
+                <a  class="btn btn-danger text-white mt-2"asp-action="Details" asp-route-id="@item.ItemId">Detalhes</a> |
+                <a  class="btn btn-danger text-white mt-2"asp-action="Delete" asp-route-id="@item.ItemId">Deletar</a>
             </td>
         </tr>
 }

@@ -2,12 +2,12 @@
     <p><img src="@Model.ImagemPequenaUrl" class="img-fluid" asp-append-version="true"></p>
     <h3>Preço : @Model.Preco.ToString("c")</h3>
     <h4>
-        <a asp-controller="Item" asp-action="Details" asp-route-itemId="@Model.ItemId">@Model.Nome</a>
+        <a class="text-danger" asp-controller="Item" asp-action="Details" asp-route-itemId="@Model.ItemId">@Model.Nome</a>
     </h4>
     <p>@Model.DescricaoCurta</p>
     <div>
         <p class="button">
-            <a class="btn btn-primary" id="cartButton" asp-controller="Carrinho"
+            <a class="btn btn-danger" id="cartButton" asp-controller="Carrinho"
                 asp-action="AdicionarItemNoCarrinhoCompra" asp-route-itemId="@Model.ItemId">
                 Incluir no Carrinho
             </a>

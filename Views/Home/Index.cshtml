@@ -4,8 +4,9 @@
 }
 
 <partial name="_Carousel" />
-<h1>Itens em Destaque</h1>
-<div class="row">
+<h1 class="text-danger text-center">Itens em Destaque</h1>
+<hr class="bg-danger">    
+<div class="row row-cols-sm-3 row-cols-1">
     @foreach (var item in Model.ItensEmDestaque)
     {
         <partial name="_Card" for="@item"></partial>

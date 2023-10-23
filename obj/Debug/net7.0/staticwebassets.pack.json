@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\Hamburger.png",
+      "PackagePath": "staticwebassets\\imagens\\Hamburger.png"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\capa.jpg",
+      "PackagePath": "staticwebassets\\imagens\\capa.jpg"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\rectangle1.png",
+      "PackagePath": "staticwebassets\\imagens\\rectangle1.png"
+    },
+    {
       "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

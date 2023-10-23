@@ -4,11 +4,11 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="text-danger">Editar</h1>
 
-<h4>Categoria</h4>
+<h4 class="text-danger">Categoria</h4>
 <hr />
-<div class="row">
+<div class="row" style="min-height: 60vh;">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -19,13 +19,13 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-danger mt-3" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="bg-danger btn border-danger text-white mt-3"asp-action=Index>De volta á lista</a>
 </div>
 

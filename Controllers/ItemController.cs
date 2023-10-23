@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerPlace2.Controllers
 {
-    [Authorize]
+
     public class ItemController : Controller
     {
         private readonly IItemRepository _itemRespository;

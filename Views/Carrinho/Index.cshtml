@@ -2,7 +2,6 @@
 <div class="Container">
     <div class="row checkoutForm">
         <div>
-            <img src="~/images/Full-Cart-icon.png" width="30" height="35" />
             <h4>Seu carrinho de
                 compras : </h4>
         </div>
@@ -28,8 +27,7 @@
                         </td>
                         <td class="text-center">
                             <a asp-controller="Carrinho" asp-action="RemoverCarrinho"
-                                asp-route-itemId="@item.Item.ItemId"><img src="~/images/remover.png" width="20px"
-                                    height="20px" />
+                                asp-route-itemId="@item.Item.ItemId"><i class="bi bi-trash3"></i>
                             </a>
                         </td>
                     </tr>
@@ -51,7 +49,7 @@
                     Pedido</a>
 
                 &nbsp;&nbsp;&nbsp;
-                <a class="btn btn-primary" asp-controller="Item" asp-action="List">Continuar
+                <a class="btn btn-danger" asp-controller="Item" asp-action="List">Continuar
                     Comprando</a>
             </div>
         </div>
