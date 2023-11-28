@@ -1,3 +1,4 @@
+using BurgerPlace2.Areas.Admin.Services;
 using BurgerPlace2.Context;
 using BurgerPlace2.Models;
 using BurgerPlace2.Repositories;
@@ -6,10 +7,16 @@ using BurgerPlace2.Services;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddPaging(options => {
+options.ViewName = "Bootstrap5";
+options.PageParameterName = "pageindex";});
+builder.Services.AddScoped<RelatorioVendasServices>();
+builder.Services.Configure<ConfiguraImagem>(builder.Configuration.GetSection("ConfImagemItem"));
 builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<IUserRoleInicial, UserRoleInicial>();
 builder.Services.AddIdentity<UserAccount, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();

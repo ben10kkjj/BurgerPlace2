@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pedidos>
+  <PedidoId>1</PedidoId>
+  <ValorTotal>20</ValorTotal>
+  <Itens>
+    <ItemId>2</ItemId>
+    <Quantidade>1</Quantidade>
+  </Itens>
+  <PedidoId>2</PedidoId>
+  <ValorTotal>23</ValorTotal>
+  <Itens>
+    <ItemId>1</ItemId>
+    <Quantidade>1</Quantidade>
+  </Itens>
+  <PedidoId>3</PedidoId>
+  <ValorTotal>34</ValorTotal>
+  <Itens>
+    <ItemId>2</ItemId>
+    <Quantidade>1</Quantidade>
+  </Itens>
+  <PedidoId>4</PedidoId>
+  <ValorTotal>34</ValorTotal>
+  <Itens>
+    <ItemId>2</ItemId>
+    <Quantidade>1</Quantidade>
+  </Itens>
+</Pedidos>

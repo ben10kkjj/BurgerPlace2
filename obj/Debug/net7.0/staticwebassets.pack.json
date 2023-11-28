@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BurgerPlace2.bundle.scp.css"
     },
     {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\XML\\Pedidos.xml",
+      "PackagePath": "staticwebassets\\XML\\Pedidos.xml"
+    },
+    {
       "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -17,8 +21,32 @@
       "PackagePath": "staticwebassets\\imagens\\Hamburger.png"
     },
     {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\Nova pasta\\13f165d1-a67c-44eb-9d69-a28d35ca5cd4..jpg",
+      "PackagePath": "staticwebassets\\imagens\\Nova pasta\\13f165d1-a67c-44eb-9d69-a28d35ca5cd4..jpg"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\Nova pasta\\4244f2c6-120a-4c59-9804-92bce3b8224b..jpg",
+      "PackagePath": "staticwebassets\\imagens\\Nova pasta\\4244f2c6-120a-4c59-9804-92bce3b8224b..jpg"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\Nova pasta\\74f80a70-b26a-4858-b6f0-01acbfb97744..jpg",
+      "PackagePath": "staticwebassets\\imagens\\Nova pasta\\74f80a70-b26a-4858-b6f0-01acbfb97744..jpg"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\Nova pasta\\96ae8c46-548c-4f29-bc03-3a013cff9cc3..jpg",
+      "PackagePath": "staticwebassets\\imagens\\Nova pasta\\96ae8c46-548c-4f29-bc03-3a013cff9cc3..jpg"
+    },
+    {
       "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\capa.jpg",
       "PackagePath": "staticwebassets\\imagens\\capa.jpg"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\item\\a3ac3c24-1878-4328-9f46-01980e4cec4f..png",
+      "PackagePath": "staticwebassets\\imagens\\item\\a3ac3c24-1878-4328-9f46-01980e4cec4f..png"
+    },
+    {
+      "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\item\\c3370b19-fd77-4135-a092-a1114098c0da..png",
+      "PackagePath": "staticwebassets\\imagens\\item\\c3370b19-fd77-4135-a092-a1114098c0da..png"
     },
     {
       "Id": "C:\\dev\\BurgerPlace2\\wwwroot\\imagens\\rectangle1.png",

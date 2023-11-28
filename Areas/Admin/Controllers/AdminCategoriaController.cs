@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BurgerPlace2.Context;
 using BurgerPlace2.Models;
 using Microsoft.AspNetCore.Authorization;
+using ReflectionIT.Mvc.Paging;
 
 namespace BurgerPlace2.Areas.Admin.Controllers
 {
@@ -23,12 +24,20 @@ namespace BurgerPlace2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminCategoria
-        public async Task<IActionResult> Index()
-        {
-              return _context.Categorias != null ? 
-                          View(await _context.Categorias.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Categorias'  is null.");
-        }
+       public async Task<IActionResult> Index(string filtro, int pageindex = 1, string sort = "Nome")
+{
+var itenslist = _context.Categorias.AsNoTracking().AsQueryable();
+
+if(filtro != null){
+itenslist = itenslist.Where(p => p.Nome.Contains(filtro));
+
+}
+var model = await PagingList.CreateAsync(itenslist, 5, pageindex, sort, "Nome");
+
+model.RouteValue = new RouteValueDictionary{{"filtro", filtro}};
+
+return View(model);
+}
 
         // GET: Admin/AdminCategoria/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -151,16 +160,29 @@ namespace BurgerPlace2.Areas.Admin.Controllers
             var categoria = await _context.Categorias.FindAsync(id);
             if (categoria != null)
             {
-                _context.Categorias.Remove(categoria);
+                try
+                {
+                    _context.Categorias.Remove(categoria);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException ex)
+                {
+                    if (ex.InnerException.ToString().Contains("FOREIGN KEY"))
+                    {
+                        ViewData["Error"] = "Essa categoria não pode ser excluída, pois já está sendo utilizada.";
+                        return View();
+                    }
+                }
+
             }
-            
-            await _context.SaveChangesAsync();
+
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool CategoriaExists(int id)
         {
-          return (_context.Categorias?.Any(e => e.CategoriaId == id)).GetValueOrDefault();
+            return (_context.Categorias?.Any(e => e.CategoriaId == id)).GetValueOrDefault();
         }
     }
 }

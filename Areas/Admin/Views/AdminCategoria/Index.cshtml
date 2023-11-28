@@ -1,11 +1,18 @@
-@model IEnumerable<BurgerPlace2.Models.Categoria>
-
+@model ReflectionIT.Mvc.Paging.PagingList<BurgerPlace2.Models.Categoria>
 @{
     ViewData["Title"] = "Index";
 }
-
+<h2>@ViewData["Erro"]</h2>
 <h1 class="text-danger">Categoria</h1>
-
+<form method="get" class="form-inline">
+<input name="filtro" class="form-control" placeholder="filtro"
+value="@Model.RouteValue["Filtro"]" />
+<button type="submit" class="btn btn-info">Procurar</button>
+</form>
+Total de Categorias : @Model.TotalRecordCount
+<div>
+<vc:pager paging-list="@Model"></vc:pager>
+</div>
 <p>
     <a class=" btn bg-danger text-white mt-3" asp-action="Create">Criar Novo</a>
 </p>
@@ -19,17 +26,18 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                <a class="btn border-danger text-danger" asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
-                <a  class="btn border-danger text-danger" asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
-                <a   class="btn border-danger text-danger"asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    <a class="btn border-danger text-danger" asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
+                    <a  class="btn border-danger text-danger" asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
+                    <a   class="btn border-danger text-danger"asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
